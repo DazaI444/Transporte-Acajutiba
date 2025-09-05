@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Completo – Sistema TFD</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        text-align: center;
+        padding: 20px;
+    }
+    header img {
+        width: 120px;
+    }
+    h1, h2, h3 {
+        color: #004080;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    section {
+        padding: 20px 40px;
+        page-break-inside: avoid;
+    }
+    .subsection {
+        margin-bottom: 20px;
+    }
+    .diagrama, .prototipo {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .prototipo img, .diagrama img {
+        width: 80%;
+        max-width: 600px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    table, th, td {
+        border: 1px solid #004080;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #004080;
+        color: #fff;
+    }
+    .page-break {
+        page-break-after: always;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="Brasao-Acajutiba.jpg" alt="Brasão da Prefeitura de Acajutiba" height="125" >
+    <h1>Sistema de Transporte TFD Acajutiba – Aplicativo e Painel Administrativo</h1>
+    <p>Documento Técnico + Protótipos</p>
+    <p>Data: 27/08/2025</p>
+</header>
+
+<section>
+    <h2>1. Objetivo do Projeto</h2>
+    <p>Este sistema visa facilitar a gestão do transporte de pacientes TFD, permitindo agendamento remoto, acompanhamento das viagens e controle de frota e motoristas. Ele atende à Secretaria de Saúde de Acajutiba, motoristas e pacientes TFD, garantindo eficiência e transparência.</p>
+</section>
+
+<section>
+    <h2>2. Escopo do Sistema</h2>
+    <ul>
+        <li><b>Aplicativo Paciente TFD:</b> agendamento, acompanhamento de viagem e notificações.</li>
+        <li><b>Painel Web Administrativo:</b> gestão de solicitações, frota, motoristas e relatórios.</li>
+        <li><b>Relatórios:</b> métricas de transporte, consumo de combustível e custos.</li>
+        <li>Integração em tempo real entre App e Painel.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. Fluxo do Sistema</h2>
+    <div class="diagrama">
+        <img src="DFD.jpeg" alt="Diagrama do fluxo do sistema">
+        <p>Fluxo: Solicitação → Aprovação → Agendamento → Execução → Conclusão → Relatórios</p>
+    </div>
+</section>
+
+<section>
+    <h2>4. Protótipos</h2>
+
+    <div class="subsection">
+        <h3>4.1 Aplicativo Paciente TFD</h3>
+        <div class="prototipo">
+            <img src="login ususario.jpeg" alt="Tela Login App" >
+            <p>Tela de Login / Cadastro</p>
+        </div>
+        <div class="prototipo">
+            <img src="solicitação de viagem.jpeg" alt="Tela Solicitação App">
+            <p>Solicitação de Viagem</p>
+        </div>
+        <div class="prototipo">
+            <img src="historico de viagem.jpeg" alt="Tela Histórico App">
+            <p>Histórico de Viagens</p>
+        </div>
+        <div class="prototipo">
+            <img src="viagem agendada.jpeg" alt="Tela Notificações App">
+            <p>Notificações e Status</p>
+        </div>
+    </div>
+
+    <div class="subsection">
+        <h3>4.2 Painel Web Administrativo</h3>
+        <div class="prototipo">
+            <img src="painel_login.jpg" alt="Tela Login Painel" >
+            <p>Login Painel Administrativo</p>
+        </div>
+        <div class="prototipo">
+            <img src="painel_dashboard.jpeg" alt="Dashboard Painel">
+            <p>Dashboard com métricas</p>
+        </div>
+        <div class="prototipo">
+            <img src="painel_solicitacoes.jpg" alt="Gestão de Solicitações Painel">
+            <p>Gestão de Solicitações TFD</p>
+        </div>
+        <div class="prototipo">
+            <img src="transportes.jpeg" alt="Gestão Frota Painel">
+          <p>Gestão de Frota e Motoristas</p>
+        </div>
+    
+    </div>
+</section>
+
+<section>
+    <h2>5. Arquitetura Tecnológica</h2>
+    <ul>
+        <li><b>Frontend App:</b> Flutter / React Native</li>
+        <li><b>Frontend Painel:</b> React + Tailwind CSS</li>
+        <li><b>Backend:</b> Node.js / Python (API RESTful)</li>
+        <li><b>Banco de Dados:</b> MySQL / PostgreSQL</li>
+        <li><b>Hospedagem:</b> Cloud</li>
+    </ul>
+</section>
+
+<section>
+    <h2>6. Requisitos Técnicos</h2>
+    <ul>
+        <li>Acesso à internet para sincronização em tempo real</li>
+        <li>Responsividade para desktop, tablet e mobile</li>
+        <li>Segurança: autenticação e criptografia de dados</li>
+        <li>Compatibilidade do App: Android e iOS</li>
+    </ul>
+</section>
+
+<section>
+    <h2>7. Estimativa de Custo</h2>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Custo Estimado (R$)</th>
+        </tr>
+        <tr>
+            <td>Desenvolvimento App</td>
+            <td>R$ 135.500,00</td>
+        </tr>
+        <tr>
+            <td>Desenvolvimento Painel</td>
+            <td>R$ 89.430,00</td>
+        </tr>
+        <tr>
+            <td>Servidor e Hospedagem anual</td>
+            <td>R$ 5.420,00</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>R$ 230.350,00</th>
+        </tr>
+    </table>
+</section>
+
+<section class="page-break">
+    <h2>8. Cronograma de Implantação</h2>
+    <table>
+        <tr>
+            <th>Etapa</th>
+            <th>Prazo Estimado</th>
+        </tr>
+        <tr>
+            <td>Planejamento e especificação</td>
+            <td>1 semana</td>
+        </tr>
+        <tr>
+            <td>Protótipo App e Painel</td>
+            <td>2 semanas</td>
+        </tr>
+        <tr>
+            <td>Desenvolvimento e testes</td>
+            <td>4 semanas</td>
+        </tr>
+        <tr>
+            <td>Treinamento e implantação</td>
+            <td>1 semana</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>8 semanas</th>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>9. Observações Finais</h2>
+    <ul>
+        <li>Sistema personalizável e escalável</li>
+        <li>Interface intuitiva para pacientes e equipe administrativa</li>
+        <li>Expansão futura para outros tipos de transporte municipal</li>
+    </ul>
+</section>
+
+<footer>
+    <p>Prefeitura de Acajutiba – Sistema TFD</p>
+</footer>
+
+</body>
+</html>
